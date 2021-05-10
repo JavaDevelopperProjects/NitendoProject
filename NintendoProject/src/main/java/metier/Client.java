@@ -6,12 +6,12 @@ public class Client {
 	
 	private String nom;
 	private String prenom;
-	private List<Jeu> jeux;
+	private List<Achat> achats;
 	
-	public Client(String nom, String prenom, List<Jeu> jeux) {
+	public Client(String nom, String prenom, List<Achat> achats) {
 		this.nom = nom;
 		this.prenom = prenom;
-		this.jeux = jeux;
+		this.achats = achats;
 	}
 
 	public String getNom() {
@@ -30,17 +30,17 @@ public class Client {
 		this.prenom = prenom;
 	}
 
-	public List<Jeu> getJeux() {
-		return jeux;
+	public List<Achat> getAchats() {
+		return achats;
 	}
 
-	public void setJeux(List<Jeu> jeux) {
-		this.jeux = jeux;
+	public void setAchats(List<Achat> achats) {
+		this.achats = achats;
 	}
 
 	@Override
 	public String toString() {
-		return "Client [nom=" + nom + ", prenom=" + prenom + ", jeux=" + jeux + "]";
+		return "Client [nom=" + nom + ", prenom=" + prenom + ", achats=" + achats + "]";
 	}
 	
 	
