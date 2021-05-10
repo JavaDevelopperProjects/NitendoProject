@@ -13,9 +13,9 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Console sony = new Console("ps2");
-		Console nintendo = new Console("gamecube");
-		Console microsoft = new Console("xbox");
+		Console sony = new Console("ps2",0,null);
+		Console nintendo = new Console("gamecube",0,null);
+		Console microsoft = new Console("xbox",0,null);
 
 		List<Console> list1 = new ArrayList<Console>();
 		List<Console> list2 = new ArrayList<Console>();
@@ -26,20 +26,21 @@ public class Test {
 		list2.add(microsoft);
 		list3.add(nintendo);
 		list3.add(sony);
-		List<Jeu> listJ = new ArrayList<Jeu>();
 		
-		Boutique b1 = new Boutique("micromania",a1,listJ);
+		//List<Jeu> listJ = new ArrayList<Jeu>();
+		Boutique b1 = new Boutique("micromania",a1,null);
 		
 		Jeu j1 = new Jeu("Zelda ocarina of Time", list3,b1);
 		Jeu j2 = new Jeu("Lego Star Wars II", list2,b1);
 		Jeu j3 = new Jeu("Monster Hunter 2", list1,b1);
 		Jeu j4 = new Jeu("MarioKart Double Dash", list2,b1);
 		Jeu j5 = new Jeu("Pokemon XD: Le souffle des tenebres", list3,b1);
-		listJ.add(j1);
+		/*listJ.add(j1);
 		listJ.add(j2);
 		listJ.add(j3);
 		listJ.add(j4);
-		listJ.add(j5);
+		listJ.add(j5);*/
+	
 		
 		System.out.println("Voici les 5 jeux en base: ");
 		System.out.println(j1.toString());
@@ -52,7 +53,7 @@ public class Test {
 		jeux.add(j1);
 		jeux.add(j3);
 		jeux.add(j5);
-		Client c = new Client("toto", "titi", jeux);
+		Client c = new Client("toto", "titi", null);
 	
 		System.out.println(c);
 		
