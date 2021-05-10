@@ -5,16 +5,18 @@ import java.util.List;
 
 import metier.Adresse;
 import metier.Boutique;
+import metier.Client;
 import metier.Console;
 import metier.Jeu;
 
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Console sony = new Console("ps2");
 		Console nintendo = new Console("gamecube");
 		Console microsoft = new Console("xbox");
+
 		List<Console> list1 = new ArrayList<Console>();
 		List<Console> list2 = new ArrayList<Console>();
 		List<Console> list3 = new ArrayList<Console>();
@@ -45,6 +47,15 @@ public class Test {
 		System.out.println(j3.toString());
 		System.out.println(j4.toString());
 		System.out.println(j5.toString());
+
+		List<Jeu> jeux = new ArrayList<Jeu>();
+		jeux.add(j1);
+		jeux.add(j3);
+		jeux.add(j5);
+		Client c = new Client("toto", "titi", jeux);
+	
+		System.out.println(c);
+		
 	}
 
 }
